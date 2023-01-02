@@ -1,3 +1,14 @@
+/**
+ * 编写一个函数，它从一个字符串中提取一个子字符串，函数原型如下：
+ *   int substr( char dst[], char src[], int start, int len );
+ * 函数任务使从src数组起始位置向后偏移start个字符的位置开始，最多复制
+ * len个非NUL字符到dst数组。在复制完后，dst数组必须以NUL字符结尾。
+ * 函数的返回值使存储在dst数组中的字符串的长度。
+ * 如果start所指定位置超过了src数组的尾部，或者start或len的值为负，
+ * 那么复制到dst数组的是个空字符串。
+ * 
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 
