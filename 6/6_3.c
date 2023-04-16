@@ -3,6 +3,7 @@
 
 
 void reverse_string( char *string );
+void reverse_string_v2( char *string );
 
 
 void main() {
@@ -10,6 +11,10 @@ void main() {
     printf("%s\n", str);
     reverse_string(str);
     printf("%s\n", str);
+
+    printf("v2:%s\n", str);
+    reverse_string_v2(str);
+    printf("v2:%s\n", str);
 }
 
 
@@ -26,5 +31,25 @@ void reverse_string( char *string ) {
         c = string[i];
         string[i] = string[j];
         string[j] = c;
+    }
+}
+
+
+void reverse_string_v2( char *string ) {
+    if (string == NULL) {
+        return;
+    }
+    char *last = string;
+    while (*last != '\0') {
+        last++;
+    }
+    last--;
+    while ( string < last ) {
+        char ch = *string;
+        *string = *last;
+        *last = ch;
+
+        string++;
+        last--;
     }
 }
